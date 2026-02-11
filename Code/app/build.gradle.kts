@@ -33,6 +33,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    tasks.withType<Test>{
+        useJUnitPlatform()
+    }
 }
 
 dependencies {
@@ -47,6 +51,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.2")
 }
 //
 //tasks.withType<Test>().configureEach {

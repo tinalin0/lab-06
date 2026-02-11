@@ -1,8 +1,10 @@
 package com.example.listycity;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CityListTest {
+
     private CityList mockCityList() {
         CityList cityList = new CityList();
         cityList.add(mockCity());
@@ -14,7 +16,7 @@ public class CityListTest {
     }
 
     @Test
-    void testAdd() {
+    public void testAdd() {
         CityList cityList = mockCityList();
         assertEquals(1, cityList.getCities().size());
         City city = new City("Regina", "Saskatchewan");
@@ -24,7 +26,7 @@ public class CityListTest {
     }
 
     @Test
-    void testAddException() {
+    public void testAddException() {
         CityList cityList = mockCityList();
         City city = new City("Calgary", "Alberta");
         cityList.add(city);
@@ -34,7 +36,7 @@ public class CityListTest {
     }
 
     @Test
-    void testGetCities() {
+    public void testGetCities() {
         CityList cityList = mockCityList();
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(0)));
         City city = new City("Charlottetown", "Prince Edward Island");
