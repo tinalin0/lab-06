@@ -53,6 +53,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.2")
+
+    implementation(files("/Users/tinalin/Library/Android/sdk/platforms/android-36.1/android.jar"))
 }
 //
 //tasks.withType<Test>().configureEach {
